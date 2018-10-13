@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: first-pod
+  name: first-pod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: first-pod
+  template:
+    metadata:
+      labels:
+        run: first-pod
+    spec:
+      containers:
+      - image: binodsuman/hello-web:latest
+        name: first-container
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
