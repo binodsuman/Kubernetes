@@ -1,0 +1,11 @@
+
+How to use both yaml files.
+
+#kubectl create -f first_pod.yaml
+#kubectl create -f first_service.yaml
+
+# kubectl get service | grep first
+first-service   NodePort    172.30.78.140   <none>        80:32234/TCP   18s
+
+Now do browse:
+Localhost:32224 or host_machine_ip_address:32234
