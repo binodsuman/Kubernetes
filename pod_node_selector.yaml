@@ -1,0 +1,15 @@
+# cat first_only_pod_node_selector.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: first-pod
+  name: first-pod
+spec:
+  containers:
+   - image: binodsuman/hello-web:latest
+     name: first-container
+     ports:
+      - containerPort: 80
+  nodeSelector:
+   hardware: high-spec
